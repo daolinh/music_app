@@ -1,0 +1,65 @@
+<section class="content-container entity-request">
+	<form name="frmcreateaccount">
+		<div class="row">
+			<div class="small-12 columns">
+				<div class="notice">			        			
+					{{lblaccount.createaccount.msg}}
+				</div>
+				<div class="fields" name="serverErrorDisplay" ng-show={{isServerError}}>
+					<span name="serverErrorDisplay" class="error error-custom" ng-show={{isServerError}}>{{serverError}}</span>
+				</div>
+				<div class="fields">                    
+					<label class="lable-create-account"> {{lblaccount.createaccount.ymail}}: </label>
+					<div class="trunomi-input">                        
+						<input disabled name="email" ng-model="account.email" type="text"/>
+					</div>
+				</div>
+				<div class="fields">                    
+					<label class="lable-create-account"> {{lblaccount.createaccount.yphone}}: </label>
+					<div class="trunomi-input">                        
+						<input disabled name="phone" ng-model="account.phone" type="text"/>
+					</div>
+				</div>
+				<div class="fields">                    
+					<label class="lable-create-account"> {{lblaccount.createaccount.uid}}: </label>	    
+					<input type="text" name="uid" ng-model="account.uid" required ng-blur="checkUid()">                  
+				</div>
+				<div class="fields" ng-show="(frmcreateaccount.uid.$error.required && frmcreateaccount.uid.$dirty)">
+					<span class="error error-custom">
+						Please enter user name before Submit!
+					</span>
+				</div>
+				<div class="fields" ng-show="unAvaiUid">
+					<span class="error error-custom">This uid is existed!</span>
+				</div>
+				<div class="fields">
+					<label class="lable-create-account"> {{lblaccount.createaccount.pwd}}: </label>
+					<input required name="pwd" ng-model="account.pwd" type="password"/>
+				</div>
+				<div class="fields" ng-show="frmcreateaccount.pwd.$error.required && frmcreateaccount.pwd.$dirty">
+					<span class="error error-custom">
+						Please enter password before Submit!
+					</span>
+				</div>
+				<div class="fields">                    
+					<label class="lable-create-account"> {{lblaccount.createaccount.vpwd}}: </label>
+					<input required name="vpwd" ng-model="account.vpwd" type="password" match="account.pwd"/>
+				</div>
+				<div class="fields" ng-show="(frmcreateaccount.vpwd.$error.required || frmcreateaccount.vpwd.$error.match) && frmcreateaccount.vpwd.$dirty" >
+					<span class="error error-custom">
+						Please	enter confirm password before Submit!
+					</span>
+					<span class="error error-custom" ng-show="frmcreateaccount.vpwd.$error.match && frmcreateaccount.vpwd.$dirty">
+						Passwords don't match.
+					</span>
+				</div>	
+				<!-- <div class="sign-in-form">
+					<input class="primary button small" ng-click="createaccount()" type="submit" value="{{lblaccount.createaccount.btncreate}}"></input>
+				</div> -->
+				<div class="small-6 small-offset-3 columns" style="float: left">
+				  <a ng-click="createaccount()" class="button small expand expand">{{lblaccount.createaccount.btncreate}}</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</section>

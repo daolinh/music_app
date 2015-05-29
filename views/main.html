@@ -1,0 +1,47 @@
+            
+<div class="container">
+    <div class="row">
+      <div class="small-4 medium-2 large-2 columns"> 
+          <div class="icon-logo">
+              <img src="images/logo.png" alt="Music" class="logo"/>
+          </div>        
+      </div>
+      <div class="large-10 medium-10 small-12 columns contain-search">
+          <form name="searchForm">
+              <div class="row collapse postfix-round">
+                <div class="small-9 columns">
+                  <input type="text" placeholder="Key words">
+                </div>
+                <div class="small-3 columns">
+                  <a class="button postfix">Search</a>
+                </div>
+              </div>
+          </form>          
+      </div>
+    </div>         
+    <nav class="icon-bar five-up">
+		<a class="item" href="" >
+<!--			<div class="messages image-icon"></div>-->
+			<span>Home</span>
+		</a>
+		<a class="item" href="#app/main/listSong">
+<!--			<div class="profile image-icon"></div>-->
+			<span>Song</span>
+		</a>
+		<a class="item" href="">
+<!--			<div class="vault image-icon"></div>-->
+			<span>Album</span>
+		</a>
+		<a class="item" href="">
+<!--			<div class="manage image-icon"></div>-->
+			<span>Singer</span>
+		</a>
+        <a class="item" href="">
+<!--			<div class="manage image-icon"></div>-->
+			<span>Band</span>
+		</a>
+	</nav>
+    <div class="main" >        
+        <ui-view></ui-view>        
+    </div>
+</div>
