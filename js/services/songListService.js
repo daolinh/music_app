@@ -2,16 +2,25 @@ angular.module('music.services').service("ListSongService",function(){
   var listSinger = [{
                     singerID:"001",
                     name:"Chi Dan",
+                    image:"images/singer-chidan.jpg",
                     Des:""
                   },
                   {
                     singerID:"002",
                     name:"Thanh Ngoc",
+                    image:"images/singer-thanhngoc.jpg",
                     Des:"",
                   },
                   {
                     singerID:"003",
                     name:"Isaac Thai",
+                    image:"images/singer-isaacThai.jpg",
+                    Des:"Thanh Ngoc",
+                  },
+                  {
+                    singerID:"003",
+                    name:"Isaac Thai",
+                    image:"images/singer-vinhthuyenkim.jpg",
                     Des:"Thanh Ngoc",
                   }];
     
@@ -37,10 +46,10 @@ angular.module('music.services').service("ListSongService",function(){
                         link:""
                     },
                     {
-                        songID:0002,
-                        name:"Wedding Dress",
+                        songID:0004,
+                        name:"Chợt Buồn",
                         singerID:001,
-                        image:"images/singer-chidan.jpg",
+                        image:"images/singer-vinhthuyenkim.jpg",
                         link:""
                     },
                     {
@@ -64,20 +73,7 @@ angular.module('music.services').service("ListSongService",function(){
                         image:"images/singer-chidan.jpg",
                         link:""
                     },
-                    {
-                        songID:0002,
-                        name:"Wedding Dress",
-                        singer:001,
-                        image:"images/singer-chidan.jpg",
-                        link:""
-                    },
-                    {
-                        songID:0002,
-                        name:"Wedding Dress",
-                        singer:001,
-                        image:"images/singer-chidan.jpg",
-                        link:""
-                    },
+                    
                     {
                         songID:0002,
                         name:"Wedding Dress",
