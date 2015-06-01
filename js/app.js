@@ -13,6 +13,7 @@ angular.module('music', ['music.controllers','music.services','music.directives'
 	})
     .state('app.main',{
 		url:'/main',
+        abstract: true,
 		templateUrl:"views/main.html",
 		controller:"MainController"
 	})
@@ -30,6 +31,11 @@ angular.module('music', ['music.controllers','music.services','music.directives'
 		url:'/listSong',
 		templateUrl:"views/list-song.html",
 		controller:"ListSongController"
+	})
+    .state('app.main.song',{
+		url:'/song',
+		templateUrl:"views/song.html",
+		controller:"SongController"
 	})
 	$urlRouterProvider.otherwise('/app/login');
 });
