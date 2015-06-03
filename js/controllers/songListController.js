@@ -2,7 +2,7 @@ angular.module('music.controllers').controller('ListSongController', function($s
     $scope.listSong = ListSongService.getListSong();
     console.log($scope.listSong);
     
-    $scope.viewSong = function(){
-        $state.go("app.main.song");
+    $scope.viewSong = function(id){
+        $state.go("app.main.song",{ID:id});
     }
 })

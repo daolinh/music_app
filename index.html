@@ -14,6 +14,7 @@
 		<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>		
         <script src="lib/foundation-5.5.2/js/foundation.min.js"></script>
         <link rel="stylesheet" href="lib/foundation-5.5.2/css/foundation.min.css">
+        <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.2/js/foundation/foundation.orbit.js"></script>
 <!--
         <link  rel="stylesheet" href="lib/bootstrap-3.3.4-dist/css/bootstrap.min.css"></link>       
 		<script src="lib/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
@@ -32,12 +33,13 @@
         <script src="js/controllers/mainController.js"></script>
         <script src="js/controllers/songListController.js"></script>
         <script src="js/controllers/songController.js"></script>
+        <script src="js/controllers/homeController.js"></script>
 							
 		<!-- Services -->
 		<script src="js/services/loginService.js"></script>	
         <script src="js/services/songListService.js"></script>        			
 	</head>
-	<body ng-app="music" ng-class="{'login-page': pageLogin, 'full-page': !pageLogin}">
+	<body ng-app="music">
         <ui-view></ui-view>        	
 	</body>
 </html>

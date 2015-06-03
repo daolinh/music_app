@@ -25,7 +25,7 @@ angular.module('music', ['music.controllers','music.services','music.directives'
     .state('app.main.home',{
 		url:'/home',
 		templateUrl:"views/home.html",
-		controller:"MainController"
+		controller:"HomeController"
 	})
 	.state('app.main.listSong',{
 		url:'/listSong',
@@ -33,7 +33,7 @@ angular.module('music', ['music.controllers','music.services','music.directives'
 		controller:"ListSongController"
 	})
     .state('app.main.song',{
-		url:'/song',
+		url:'/song/{ID}',
 		templateUrl:"views/song.html",
 		controller:"SongController"
 	})
